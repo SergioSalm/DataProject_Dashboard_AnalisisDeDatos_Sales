@@ -26,3 +26,30 @@ Vemos que todos los datos son correctos.
 
 ### Normalizar los datos
 Todas las columnas tienen los datos normalizados
+
+# Análisis descriptivo de columnas numéricas
+Creamos una subcarpeta nueva dentro de 'Data' con el nombre '3-Data_analisis'. Dentro copiamos la excel car_Sales_transformados y la renombreamos a car_sales_analisis_descriptivo.   
+Creamos una nueva hoja excel llamada 'analisis_descriptivo_numericas'  
+Borramos la hoja Nulos.  
+Eliminamos la columna 'Duplicado' de la hoja car_sales.  
+
+Hemos analizado las estadísticas descriptivas para las siguientes columnas numéricas:  
+
+Annual Income.
+Price ($).
+
+# Análisis descriptivo de columnas categoricas
+Sobre la misma hoja excel anterior, creamos una hoja nueva llamada 'analisis_descriptivo_categorica' y analizamos las siguientes columnas categoricas:  
+Gender.
+Dealer_Name.
+Company.
+Model.
+Engine. 
+Transmission.
+Color.
+Body Style.
+Dealer_Region.
+
+# Análisis descriptivo de columnas fechas
+Sobre la misma hoja excel anterior, creamos una hoja nueva llamada 'analisis_descriptivo_fechas' y analizamos las columnas de tipo fecha:  
+Date
