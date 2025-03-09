@@ -73,3 +73,37 @@ Body style.
 Annual income type.  
 Company.
 Date.   
+
+# Elección de las columnas relevantes para el dashboard
+Creamos una carpeta llamada 'Datos_dashboard'. En esta carpeta copiamos el fichero 'analisis_descriptivo_cat_temp_ventas' y lo renombramos a 'dashboard'.  
+Eliminamos todas las hojas a excepción de la 'car sales'. Creamos una hoja nueva llamada 'Columnas_relevantes_dashboard'y otra llamada 'Kpi'.  
+Hemos analizados las columnas para decidir nuestros kpi, segmentadores y gráficas.  
+
+KPI:  
+Total ventas.    
+Importe de las ventas.    
+Importe medio de las ventas.  
+
+Segmentadores:  
+Year.  
+Month.  
+Gender.  
+
+Transmision.  
+Color.  
+Body style.  
+Engine.  
+
+Gráficos:  
+Company.  
+Dealer region.  
+Annual Income Type.  
+
+Gráfico temporal:
+Date
+
+
+
+
+
+
