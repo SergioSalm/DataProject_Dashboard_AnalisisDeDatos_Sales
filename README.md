@@ -1,109 +1,68 @@
-# Análisis de las ventas de coches
+# Proyecto de Análisis de las ventas de coches en EE.UU
+<div style="text-align: center;">
+    <img src="Img/portada.png" alt="portada" />
+</div>
 
-Vamos a realizar el estudio sobre las tendencias de ventas de coches en los años 2022 a 2023.  
-Descargamos el fichero desde la URL https://www.kaggle.com/datasets/safaeahb/car-sales-analysis-dashboard?select=car+sales.csv  
+Este proyecto tiene como objetivo analizar las tendencias de ventas de coches, utilziando datos históricos de los años 2022 a 2023 y mostrando los resultados en un dashboard interactivo.    
 
-En la primera parte del proyecto, una vez descargado el fichero en formato csv, los transformamos a excel en formato tabla para poder comenzar a trabajar con los datos.  
-Creamos la carpeta 'Data' que contendrá todos los ficheros. Dentro creamos la carpeta '1-Data_raw' con dos subcarpetas más. La primea es la carpeta csv con el fichero original descargado, y la segunda excel, con el fichero csv importado en excel en formato tabla. Al pasar al formato tabla, corregimos el valor de columna Engine 'DoubleÂ' por 'Double'.
-Subimos el proyecto a Git.  
+## Descripción del proyecto
+El análisis de las ventas de coches en los estados unidos durante los años 2022 y 2023 busca identificar tendencias, patrones de compra y factores que influyen en el mercado automovilístico.  
 
-EL siguiente paso que realizamos es el estudio de las columnas, indicando una descripción de cada columna y analizando que columnas son relevantes para el análisis.  
-Luego realizamos la transformación y limpieza.  
-
-# Transformación y limpieza
-Creamos una subcarpeta nueva dentro de 'Data' con el nombre '2-Datos_transformados'. Dentro creamos una nueva hoja excel a partir de la anterior y la renombramos a 'car_sales_transformados'.  
-Creamos una columna nueva llamada 'Duplicados' para ver si tenemos algún identificador de ventas duplicado. No existen duplicados.  
-
-## Limpiamos los datos de la tabla
-
-### Eliminamos datos irrelevantes
-Eliminamos las columnas customer_name, dealer_no, phone  
-
-### Los tipos de datos correctos
-Creamos una hoja nueva llamada 'Nulos' para ver cuantas columnas tienen valores nulos. Todos los datos están rellenos.  
-Vemos que todos los datos son correctos.  
-
-### Normalizar los datos
-Todas las columnas tienen los datos normalizados  
-
-# Análisis descriptivo de columnas numéricas
-Creamos una subcarpeta nueva dentro de 'Data' con el nombre '3-Data_analisis'. Dentro copiamos la excel car_Sales_transformados y la renombramos a car_sales_analisis_descriptivo.   
-Creamos una nueva hoja excel llamada 'analisis_descriptivo_numericas'  
-Borramos la hoja Nulos.  
-Eliminamos la columna 'Duplicado' de la hoja car_sales.  
-
-Hemos analizado las estadísticas descriptivas para las siguientes columnas numéricas:  
-
-Annual Income.  
-Price ($).  
-
-# Análisis descriptivo de columnas categoricas
-Sobre la misma hoja excel anterior, creamos una hoja nueva llamada 'analisis_descriptivo_categorica' y analizamos las siguientes columnas categoricas:  
-Gender.  
-Dealer_Name.  
-Company.  
-Model.  
-Engine.  
-Transmission.  
-Color.  
-Body Style.  
-Dealer_Region.  
-
-# Análisis descriptivo de columnas fechas
-Sobre la misma hoja excel anterior, creamos una hoja nueva llamada 'analisis_descriptivo_fechas' y analizamos las columnas de tipo fecha:  
-Date  
+## Estructura del proyecto
 
 
-# Análisis descriptivo de las numéricas con las ventas
-En la carpeta Data_analisis, duplicamos la excel 'car_sales_analisis_descriptivo' y la nombramos 'analisis_descriptivo_numericas_ventas'.  
-Sobra la excel nueva, eliminamos la hoja 'analisis_descriptivo_categorica' y 'analisis_descriptivo_fechas'. Creamos la hoja 'analisis_ventas_numericas'.  
-Realizamos el análisis de las columnas numéricas con las ventas de coches a través de tablas y gráficos.
-Anual Income.  
-Price
+## Datos
+Descargamos el fichero desde la URL https://www.kaggle.com/datasets/safaeahb/car-sales-analysis-dashboard?select=car+sales.csv    
 
-# Análisis descriptivo de las categoricas y temporales con las ventas
-En la carpeta Data_analisis, duplicamos la excel 'car_sales_analisis_descriptivo' y la nombramos 'analisis_descriptivo_cat_temp_ventas'.  
-Eliminamos la hoja 'analisis_descriptivo_numericas'. Creamos la hoja 'vista_categoricas' y 'vista_fechas'.
-Creamos una columna nueva 'Annual income type' para agrupar los tipos de ingresos en 'Annual income type' en función del valor de la mediana de la columna Annual Income. Si los ingresos son iguales o inferiores a 100.000, el valor será 'Low'. Si los ingreos están entre 101.001 y 735.000 (el dobre de la mediana), el valor será 'High'. Y si están por encima de 1.470.001, el valor será 'Superior'. 
-Cogemos el valor de 100.000 ya que el salario medio anual en estados unidos ronda los 77.000$. El siguiente rango de ingresos lo establecemos en 734.000$ ya que es la mediana de la columna 'Annual income'.
-Realizamos el análisis de las columnas categoricas con las ventas de coches a través de tablas y gráficos dinámicos.
-Gender.  
-Color.  
-Body style.  
-Annual income type.  
-Company.
-Date.   
+## Tecnologías Utilizadas
+- Excel
 
-# Elección de las columnas relevantes para el dashboard
-Creamos una carpeta llamada 'Datos_dashboard'. En esta carpeta copiamos el fichero 'analisis_descriptivo_cat_temp_ventas' y lo renombramos a 'dashboard'.  
-Eliminamos todas las hojas a excepción de la 'car sales'. Creamos una hoja nueva llamada 'Columnas_relevantes_dashboard'y otra llamada 'Kpi'.  
-Hemos analizados las columnas para decidir nuestros kpi, segmentadores y gráficas.  
+## Estructura de datos
 
-KPI:  
-Total ventas.    
-Importe de las ventas.    
-Importe medio de las ventas.  
-
-Segmentadores:  
-Year.  
-Month.  
-Gender.  
-
-Transmision.  
-Color.  
-Body style.  
-Engine.  
-
-Gráficos:  
-Company.  
-Dealer region.  
-Annual Income Type.  
-
-Gráfico temporal:
-Date
+El archivo de datos original consta de las siguientes conlumnas:  
+- **Car_id:** identificador único de la venta.  
+- **Date:** Fecha de la venta del vehículo.
+- **Customer_Name:** Nombre del cliente que ha comprado el coche.
+- **Gender:** Género del cliente que ha comprado el coche.
+- **Annual Income:** Ingresos anuales del comprador del coche.
+- **Dealer_Name:** Nombre del concesionario.
+- **Company:** Marca del coche que se ha vendido.
+- **Model:** Modelo del coche que se ha vendido
+- **Engine:** Tipo de motor del coche vendido. 
+- **Transmission:** Tipo de transmisión del coche.
+- **Color:** Color del coche.
+- **Price ($):** Precio que ha costado el coche:
+- **Dealer_No:** Número del concesionario.
+- **Body Style:** Estilo de la corrocería del coche.
+- **Phone:** Télefono. Puede que sea el teléfono del comprador del coche. Es una columna irrevelente, así que no le vamos a dar importancia.
+- **Dealer_Region:** Región del concesionario.
 
 
+## Desarrollo del proyecto
 
+Entendimiento general del conjunto de datos y de las columnas.
+Eliminación de columnas, establecimiento del tipo de los datos y normalización de los datos.
+Análisis descriptivo de las columnas numéricas.
+Análisis descriptivo de las columnas categóricas y temporales.
+Análisis descriptivo de las columnas numéricas y la columna objetivo.
+Análisis descriptivo de las columnas categóricas y temporales. Creación de nuevas columnas.
+Elección de las columnas relevantes para el dashboard.
+Creación del dashboard.
 
+## Dashboard
+<div style="text-align: center;">
+    <img src="Img/dashboard.png" alt="dashboard" />
+</div>
 
+## Conclusiones
+- Existe una tendencia al alza en la ventas, ya que 2023 supera en ventas al año 2022.  
+- Los meses donde más coches se compran son los meses de final de año.  
+- Las marcas americanas son las marcas con mayores ventas.  
+- Los coches de tipo de SUV son los favoriros de los compradores.  
+- El perfíl de comprador de coches son los que tienen ingresos superiores.
 
+## Contribuciones
+Las contribuciones a este proyecto son bienvenidas. Si tienes alguna sugerencia, mejora o corrección, no dudes en ponerte en contacto o enviar tus ideas.
+
+## Autor
+Sergio Salmerón - [GitHub Profile](https://github.com/SergioSalm)
