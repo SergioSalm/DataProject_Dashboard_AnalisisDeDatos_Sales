@@ -9,7 +9,28 @@ Este proyecto tiene como objetivo analizar las tendencias de ventas de coches, u
 El análisis de las ventas de coches en los estados unidos durante los años 2022 y 2023 busca identificar tendencias, patrones de compra y factores que influyen en el mercado automovilístico.  
 
 ## Estructura del proyecto
-
+```
+DataProject_Dashboard_AnalisisDeDatos_Sales
+├─ Data                         #Carpeta con los archivos utilizados
+│  ├─ 1-Data_raw                    #Carpeta con los archivos originales
+│  │  ├─ csv
+│  │  │  └─ car sales.csv
+│  │  └─ excel
+│  │     └─ car_sales.xlsx
+│  ├─ 2-Datos_transformados         #Carpeta con los datos transformados
+│  │  └─ car_sales_transformados.xlsx
+│  ├─ 3-Data_analisis               #Carpeta con los archivos utilizados
+│  │  ├─ analisis_descriptivo_cat_temp_ventas.xlsx
+│  │  ├─ analisis_descriptivo_numericas_ventas.xlsx
+│  │  └─ car_sales_analisis_descriptivo.xlsx
+│  ├─ 4-Datos_dashboard             #Carpeta con el dasboard final
+│  │  └─ dashboard.xlsx
+│  └─ Car_sales.docx
+├─ Img                              #Carpeta con las imágenes utilizadas en el readme-md
+│  ├─ dashboard.png
+│  └─ portada.png
+└─ README.md
+```
 
 ## Datos
 Descargamos el fichero desde la URL https://www.kaggle.com/datasets/safaeahb/car-sales-analysis-dashboard?select=car+sales.csv    
